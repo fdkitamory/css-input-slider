@@ -33,7 +33,7 @@
 	.slider__controls{
 		position: absolute;
 		height: 24px;
-		bottom: 0; right: 10px;
+		
 		z-index: 9;
 	}
 		.slider__switch_rotary{
@@ -41,13 +41,26 @@
 			width: 12px; height: 12px;
 			border-radius: 60px;
 			display: inline-block;
-            background-image: linear-gradient(to bottom, rgb(228, 228, 228) 50%, rgb(255, 255, 255) 100%);
+			background-image: linear-gradient(to bottom, rgb(255, 255, 255) 12%, rgb(228, 228, 228) 50%);
 			box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.75);
 		}
 			.slider__switch_rotary:hover{
 				cursor: pointer;
-				background-image: linear-gradient(to bottom, rgb(255, 255, 255) 12%, rgb(228, 228, 228) 50%);
+			    background-image: linear-gradient(rgb(228, 228, 228) 50%, rgb(255, 255, 255) 100%);
 			}
+	/*Позицианируем переключатели*/
+	.slider__controls._top{
+		top: 0;
+	}
+	.slider__controls._right{
+		right: 10px;
+	}	
+	.slider__controls._left{
+		left: 10px;
+	}
+	.slider__controls._bottom{
+		bottom: 0;
+	}
 
 
 /*Preview*/
