@@ -35,21 +35,15 @@
 		}
 
 	/*Вложения в слайд img/emmbed*/
-	.slider__img{
+	.slider__item img,
+	.slider__item iframe{
 		width: 100%
 	}
-	/*Для проекта который я делаю слайдер нужен для рекламы и резиновый, 
-	поэтому некотоыре рекламные карт инки можно обрезать тремя способами: 
-	- справа/слева
-	- с двух сторон понемногу*/
-		
 
-	
 	/*Блок переключателей*/
 	.slider__controls{
 		position: absolute;
 		height: 24px;
-		
 		z-index: 9;
 	}
 		.slider__switch_rotary{
