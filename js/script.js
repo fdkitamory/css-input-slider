@@ -1,15 +1,31 @@
-// $(document).ready(function(){
-// 	var i = 2,
-// 		slidesCount = $('#slide > :radio').size();
-// 	setInterval(function () {
-// 		if (i <= slidesCount){
-// 			$('#slide > input#slide_'+i).click();	
-// 			i++;
-// 		}else{
-// 			i = 1;
-// 			$('#slide > input#slide_'+i).click();
-// 			i++;
-// 		}
+document.addEventListener( "DOMContentLoaded", function(){
+	controlElements = document.querySelectorAll('.slider__switch'); 
+	
+	function findActiveSlide() {
+	  	for(var i=0; i<controlElements.length; i++) {
+	    	if (controlElements[i].checked == true ) return i;
+	  	}
+  		return -1;
+  		console.log(i);
+	}
+
+	console.log(findActiveSlide());
+
+	function nextSlide () {
+		var activeSlide = findActiveSlide();
+
+		if (activeSlide >= controlElements.length - 1) {
+			controlElements[0].checked = true;
+		} else{
+			activeSlide++;
+			controlElements[activeSlide].checked = true;
+		};
 		
-// 	}, 7000);
-// });
+	}
+
+	setInterval(
+		function() { 
+			nextSlide(); 
+		}, 2000);
+
+});
