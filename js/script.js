@@ -1,7 +1,7 @@
 document.addEventListener( "DOMContentLoaded", function(){
 
 	var controlElements = document.querySelectorAll('.slider__switch'),
-		sliderSettingsInterval = (slider.customSettings == null) ? 2000 : slider.setTimeInterval;
+		sliderSettingsInterval = (slider.customSettings == null) ? 3000 : slider.setTimeInterval;
 
 		// if (slider.setTimeInterval == null){
 		// 	console.log('Настройки не прописаны');
