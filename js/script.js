@@ -1,17 +1,23 @@
 document.addEventListener( "DOMContentLoaded", function(){
-	controlElements = document.querySelectorAll('.slider__switch'); 
-	
+
+	var controlElements = document.querySelectorAll('.slider__switch'),
+		sliderSettingsInterval = (slider.setTimeInterval == null) ? 2000 : slider.setTimeInterval;
+
+		// if (slider.setTimeInterval == null){
+		// 	console.log('Настройки не прописаны');
+		// 	sliderSettingsInterval = 2000
+		// } else {
+		// 	sliderSettingsInterval = slider.setTimeInterval
+		// }
+
 	function findActiveSlide() {
 	  	for(var i=0; i<controlElements.length; i++) {
 	    	if (controlElements[i].checked == true ) return i;
 	  	}
   		return -1;
-  		console.log(i);
 	}
 
-	console.log(findActiveSlide());
-
-	function nextSlide () {
+	function slideRotation () {
 		var activeSlide = findActiveSlide();
 
 		if (activeSlide >= controlElements.length - 1) {
@@ -25,7 +31,8 @@ document.addEventListener( "DOMContentLoaded", function(){
 
 	setInterval(
 		function() { 
-			nextSlide(); 
-		}, 2000);
+			console.log(sliderSettingsInterval);
+			slideRotation(); 
+		}, sliderSettingsInterval);
 
 });
